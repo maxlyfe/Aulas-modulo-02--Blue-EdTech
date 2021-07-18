@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap'); /*importa fontes do google */
+* { /* tira as margens padrão do site */
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; /* Modifica a fonte dos textos, como estamos no * sera modificado em todo o site.*/
+}
+html{
+    scroll-behavior: smooth;
+}
+nav {
+    background-color: #2de6e6; /*Escolhe a cor da TAG (NAV)*/
+    /*margin-left: 1rem;*/ /*Cria uma margem (fora do elemento nav) no lado esquerdo de Xrem, o rem é uma medida realativa da sua tela*/
+    /*padding: 1rem;*/ /*cria uma expanção dentro do elemento NAV*/ /*quando não escolhemos o lado, ele faz para os quatro lados */
+    font-weight: 500; /*Escolhe o peso da fonta, no nosso casso importamos todos os pessos então temos diferentes grossores de fontes. */
+    position: fixed;
+    width: 100%;
+}
+
+nav ul{ /* pega tudo o que esta dentro da ul que esta dentro da nav e modifica o que esta ali dentro*/
+    list-style: none; /*deixa a lista sem nenhum estilo, neste caso tira os pontinhos pretos a esquerda*/
+    /*background-color: rgb(45, 230, 230); Escolhe a cor da TAG (ul)*/
+    display: flex; /*Deixa uma "li" do daldo da outra*/
+    justify-content: center; /*Deixa os itens alineados no centro (flex-start e flex-end) seriam as outras opções.*/
+}
+nav ul li{
+    padding: 1rem; /* da um espaço dentro de cada item dentro do "li" */
+}
+nav ul li a{ /* muda apenas os textos dentro de 'a', por boas praticas é importante declarar todo o caminho*/
+    text-decoration: none;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+header div#img-dev{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+header div p{
+    font-size: 2vw;
+    font-weight: 500;
+    color: #2de6e6;
+
+}
+header div span{
+    font-size: 1vw;
+    font-weight: 300;
+    color: #2de6e6;
+}
+
+section#sobre-mim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #2de6e6;
+}
+section#sobre-mim div img{
+    width: 60%;
+    transform: scaleX(-1);
+    border-radius: 50%;
+}
+section#sobre-mim div p{
+    font-size: 2.1vw;
+    text-align: justify;
+    color: antiquewhite;
+    line-height: 2.5rem;
+}
+section#projetos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+section#pojetos div img{
+    display: block;
+    margin: auto;
+}
+section#projetos div h2{
+    text-align: center;
+    padding: 1rem;
+}
+section#projetos div p{
+    text-align: justify;
+}
+section#projetos div{
+    padding: 2rem;
+}
+section#projetos div button{
+    border: 1px solid #2de6e6;
+    background-color: #fff;
+    color: #2de6e6;
+    padding: 1.5rem;
+    font-size: 900;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: .6s ease-out;
+}
+section#projetos div button:hover{
+    background-color: #2de6e6;
+    color: #fff;
+    transform: scale(1.2);
+}
+section#habilidades{
+    padding: 3rem 10rem 3rem 10rem;
+    background: #2de6e6;
+}
+section#habilidades h2{
+    text-align: center;
+    font-size:  2rem;
+    margin-bottom: 2.5rem;
+}
+section#habilidades p{
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-size: 900;
+}
+section#habilidades div{
+    display: flex;
+    border: 1px solid blue;
+    border-radius: 1rem;
+}
+section#habilidades div span#python{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 50%;
+
+}
+section#habilidades div span#html{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 40%;
+
+}
+section#habilidades div span#css{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 30%;
+
+}
+section#habilidades div span#js{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 01%;
+}

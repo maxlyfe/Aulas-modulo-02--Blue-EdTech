@@ -1,0 +1,110 @@
+<!DOCTYPE html> <!--Informa a versão do HTML, obrigatorio para iniciar um codigo de website -->
+<html lang="pt-br"> <!--TAG mãe, abre o HTML é decide a linguagem do site-->
+
+    <head> <!--Cabeça, a tag não é mostrado para o usuario.-->
+        <meta charset='UTF-8'> <!--Informa o tipo de teclado que o usuario vai utilizar.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portifolio Max LyFe</title> <!--Decide qual será o titulo do site.-->
+        <link rel="stylesheet" href='./assets/css/style.css'> <!--Chama o style.css para realizar a modificação grafica do codigo.-->
+    </head> <!--Fecha a TAG (<head>)-->
+    
+
+    <body> <!--Esta é a TAG que define nosso site, tudo o que estiver dentro dela sera mostrado para o usuario.-->
+        <nav> <!--Abre a TAG 'Menu'-->
+            <ul><!--Abre a TAG 'lista desordenada'-->
+                <!--<li><a href="https://www.google.com.br/" target="_blank"> Google</a></li>  cria uma lista na lista, deixa ele com um link e faz abrir em uma nova aba.-->
+                <!-- <li><a href="https://www.google.com.br/" target="_blank"> Google</a></li> -->
+                <li> <!-- Abre a TAG item-->
+                    <a href="#sobre-mim" target="">
+                        Inicio
+                    </a>
+                </li> <!-- Fecha a TAG item-->
+                <li><!-- Abre a TAG item-->
+                    <a href='#projetos'>
+                    Projetos
+                    </a>
+                </li><!-- Fecha a TAG item-->
+                <li><!-- Abre a TAG item-->
+                    <a href='#habilidades'>
+                    Habilidades
+                    </a>
+                </li><!-- Fecha a TAG item-->
+                <li><!-- Abre a TAG item-->
+                    <a href=''>
+                    Contato
+                    </a>
+                </li><!-- Fecha a TAG item-->
+                
+            </ul><!-- Fecha a TAG 'Lista desordenada'-->
+            
+        </nav> <!-- Fecha a TAG 'Menu'-->
+        <header>
+            <div>
+                <p>
+                    Faça como um programador. Quando tudo está errado e confuso, apague tudo e recomece do zero.
+                </p>
+                <span>Max LyFe</span>
+            </div>
+            <div id="img-dev">
+                <img src="./assets/img/Create-bro.svg" width="200" alt="Imagem que representa a contrução de ideias.">
+            </div>
+        </header>
+
+        <section id="sobre-mim">
+            <div>
+                <img src="./assets/img/Max_Sem_Fundo.png" width="200" alt="Foto de Max">
+            </div>
+            <div>
+                <p>
+                    Estudante da BlueEdtech
+                </p>
+            </div>
+        </section>
+        <section id="projetos">
+            <div>
+                <img src="./assets/img/Picsum-logo.png" alt="">
+                <h2>Projeto 1</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto velit culpa quas repellat facilis veritatis saepe voluptatibus explicabo inventore sit voluptatum eaque ipsam dolorem minima delectus magnam, labore itaque sint?</p>
+                <button>Veja mais</button>
+            </div>
+            <div>
+                <img src="./assets/img/Picsum-logo.png" alt="">
+                <h2>Projeto 2</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore illo sequi, asperiores fugiat molestias vitae ea. Officia omnis molestiae cumque est quibusdam. Dolorem aut ipsam reprehenderit maxime odit iure dolores.</p>
+                <button>Veja mais</button>  
+            </div>
+            <div>
+                <img src="./assets/img/Picsum-logo.png" alt="">
+                <h2>Projeto 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nisi dignissimos excepturi quidem non, in eum, incidunt facere, rerum at officia consequuntur nemo sed vel assumenda rem quasi explicabo doloribus!</p>
+                <button>Veja mais</button>
+            </div>
+            <div>
+                <img src="./assets/img/Picsum-logo.png" alt="">
+                <h2>Projeto 4</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores est voluptas sit voluptatibus voluptatum aliquid molestiae voluptates! Possimus aliquam quo obcaecati consequuntur accusantium dolorum quaerat neque? Nesciunt laudantium aspernatur iusto.</p>
+                <button>Veja mais</button>
+            </div>
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <p>Python</p>
+                <div>
+                    <span id="python">50%</span>
+                </div>
+            <p>HTML 5</p>
+            <div>
+                <span id="html">40%</span>
+            </div>
+            <p>css</p>
+            <div>
+                <span id="css">30%</span>
+            </div>
+            <p>JS</p>
+            <div>
+                <span id="js">01%</span>
+            </div>
+
+        </section>
+    </body><!-- Fecha a nossa TAG (<body>).-->
+</html>

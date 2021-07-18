@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap'); /*importa fontes do google */
+* { /* tira as margens padrão do site */
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif; /* Modifica a fonte dos textos, como estamos no * sera modificado em todo o site.*/
+}
+html{
+    scroll-behavior: smooth;
+}
+nav {
+    background-color: #2de6e6; /*Escolhe a cor da TAG (NAV)*/
+    /*margin-left: 1rem;*/ /*Cria uma margem (fora do elemento nav) no lado esquerdo de Xrem, o rem é uma medida realativa da sua tela*/
+    /*padding: 1rem;*/ /*cria uma expanção dentro do elemento NAV*/ /*quando não escolhemos o lado, ele faz para os quatro lados */
+    font-weight: 500; /*Escolhe o peso da fonta, no nosso casso importamos todos os pessos então temos diferentes grossores de fontes. */
+    position: fixed;
+    width: 100%;
+}
+
+nav ul{ /* pega tudo o que esta dentro da ul que esta dentro da nav e modifica o que esta ali dentro*/
+    list-style: none; /*deixa a lista sem nenhum estilo, neste caso tira os pontinhos pretos a esquerda*/
+    /*background-color: rgb(45, 230, 230); Escolhe a cor da TAG (ul)*/
+    display: flex; /*Deixa uma "li" do daldo da outra*/
+    justify-content: center; /*Deixa os itens alineados no centro (flex-start e flex-end) seriam as outras opções.*/
+}
+nav ul li{
+    padding: 1rem; /* da um espaço dentro de cada item dentro do "li" */
+}
+nav ul li a{ /* muda apenas os textos dentro de 'a', por boas praticas é importante declarar todo o caminho*/
+    text-decoration: none;
+    color: white;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+header div#img-dev{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+header div p{
+    font-size: 2vw;
+    font-weight: 500;
+    color: #2de6e6;
+
+}
+header div span{
+    font-size: 1vw;
+    font-weight: 300;
+    color: #2de6e6;
+}
+
+section#sobre-mim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    background-color: #2de6e6;
+}
+section#sobre-mim div img{
+    width: 60%;
+    transform: scaleX(-1);
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+section#sobre-mim div p{
+    font-size: 2.1vw;
+    text-align: justify;
+    color: antiquewhite;
+    line-height: 2.5rem;
+}
+section#projetos{
+    display: flex; /*Aciona o flex-box e coloca um item do lado do outro automaticamente */
+    justify-content: center; /* Alinha os itens horizaontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding: 3rem; /* É um espaçamento interno nos nossos elementos. */
+}
+section#pojetos div img{
+    /* essas duas linha, alinham o elemento(TAG) centralmente */
+    display: block; /*Faz o display virar um block*/
+    margin: auto; /* Cria margen iguais dos dois lados deixando o block centralizado. */
+}
+section#projetos div h2{
+    text-align: center;
+    padding: 1rem;
+}
+section#projetos div p{
+    text-align: justify;
+}
+section#projetos div{
+    padding: 2rem;
+}
+section#projetos div button{
+    border: 1px solid #2de6e6;
+    background-color: #fff;
+    color: #2de6e6;
+    padding: 1.5rem;
+    font-size: 900;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: .6s ease-out;
+}
+section#projetos div button:hover{
+    background-color: #2de6e6;
+    color: #fff;
+    transform: scale(1.2);
+}
+section#habilidades{
+    padding: 3rem 10rem 3rem 10rem;
+    background: #2de6e6;
+}
+section#habilidades h2{
+    text-align: center;
+    font-size:  2rem;
+    margin-bottom: 2.5rem;
+}
+section#habilidades p{
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-size: 900;
+}
+section#habilidades div{
+    display: flex;
+    border: 1px solid blue;
+    border-radius: 1rem;
+}
+section#habilidades div span#python{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 50%;
+
+}
+section#habilidades div span#html{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 40%;
+
+}
+section#habilidades div span#css{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 30%;
+
+}
+section#habilidades div span#js{
+    background: blue;
+    color: #fff;
+    text-align: center;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    width: 01%;
+}
+
+section#contato {
+    padding: 3rem 10rem 3rem 10rem; /*espaçamento interno em sentido hario*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /*quebra o displei quando não couber mais os dois elementos no mesmo espaço*/
+}
+section#contato div#redes{
+    width: 100%; /*colocamos a div redes em tamanho 100% para que a linha sempre quebre */
+}
+section#contato div#redes h3{
+    text-align: center; /*Alinhamento centralizado do texto*/
+    font-size: 2.5rem; /* Tamanho da fonte do elemento*/
+    margin-bottom: 2rem; /*Margem para baixo do elemento*/
+}
+section#contato div#redes div#icons{
+    display: flex;
+    justify-content: center;
+}
+section#contato div#redes div#icons a{
+    text-decoration: none; /*Tira o subliniado e toda decoração do texto, este icono se comporta como uma fonte*/
+    color: #2de6e6;
+    font-size: 4rem; /*como o icone é considerado uma fonte, com este comando aumentamos ele de tamanho*/
+    padding: 2rem;
+    transition:  all .4s ease-out; /*suavisa a transição de cores no hover */
+    
+}
+
+section#contato div#redes div#icons a:hover{ /*quando passar o mouse sobre o elemento ele vai ter uma transição, pelo comando houver */
+    color: #817fff;
+
+}
+section#contato div#redes div#icons a i{
+    transition:  all .4s ease-out;
+}
+section#contato div#redes div#icons a i:hover{ /*o transforme só funciona dentro do elemento que aparece na tela, por isso colocamos no i e não no a, já que o a é um link*/
+    transform: scale(1.5); /*Faz uma trancição em escala do icone importado*/
+}
+
+section#contato div#form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+section#contato div#form h3{
+    width: 100%;
+    text-align: center;
+    font-size:  2.5rem;
+    margin-bottom:  2rem;
+}
+section#contato div#form form{
+    width: 50%;
+
+}
+
+section#contato div#form form input, textarea{
+    width: 100%;
+    padding: .5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    margin-top: .5rem;/*cria margens na parte superior */
+    margin-bottom: 1rem; /*agora na parte inferior*/
+    outline: none; /*Retira a borda do input quando clico dentro dele*/
+
+}
+section#contato div#form form label{
+    font-size:  1.2rem;
+}
+
+section#contato div#form form button:hover{
+    transition:  all .4s ease-out;
+}
+section#contato div#form form button{
+    border: 1px solid #2de6e6;
+    background-color: #fff;
+    color: #2de6e6;
+    padding: 1rem;
+    font-size: 1vw;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: .6s ease-out;
+    width: 40%;
+
+}
+
+section#contato div#form form button{
+    background-color: #2de6e6;
+    color: #fff;
+    transform: scale(1.5);
+}
+section#contato div#form form button:hover{
+    transform: scale(1.5);
+}
