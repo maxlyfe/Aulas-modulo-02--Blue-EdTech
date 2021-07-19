@@ -250,13 +250,10 @@ section#contato div#form form button{
     cursor: pointer;
     transition: .6s ease-out;
     width: 20%;
-
 }
-
 section#contato div#form form button#enviar{
     background-color: #2de6e6;
     color: #fff;
-    transform: scale(1.5);
 }
 section#contato div#form form button:hover{
     transform: scale(1.5);
