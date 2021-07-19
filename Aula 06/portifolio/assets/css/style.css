@@ -15,7 +15,6 @@ nav {
     position: fixed;
     width: 100%;
 }
-
 nav ul{ /* pega tudo o que esta dentro da ul que esta dentro da nav e modifica o que esta ali dentro*/
     list-style: none; /*deixa a lista sem nenhum estilo, neste caso tira os pontinhos pretos a esquerda*/
     /*background-color: rgb(45, 230, 230); Escolhe a cor da TAG (ul)*/
@@ -44,14 +43,12 @@ header div p{
     font-size: 2vw;
     font-weight: 500;
     color: #2de6e6;
-
 }
 header div span{
     font-size: 1vw;
     font-weight: 300;
     color: #2de6e6;
 }
-
 section#sobre-mim{
     display: flex;
     justify-content: center;
@@ -137,7 +134,6 @@ section#habilidades div span#python{
     padding: 1.3rem;
     border-radius: 1rem;
     width: 50%;
-
 }
 section#habilidades div span#html{
     background: blue;
@@ -165,7 +161,6 @@ section#habilidades div span#js{
     border-radius: 1rem;
     width: 01%;
 }
-
 section#contato {
     padding: 3rem 10rem 3rem 10rem; /*espaçamento interno em sentido hario*/
     display: flex;
@@ -190,12 +185,9 @@ section#contato div#redes div#icons a{
     font-size: 4rem; /*como o icone é considerado uma fonte, com este comando aumentamos ele de tamanho*/
     padding: 2rem;
     transition:  all .4s ease-out; /*suavisa a transição de cores no hover */
-    
 }
-
 section#contato div#redes div#icons a:hover{ /*quando passar o mouse sobre o elemento ele vai ter uma transição, pelo comando houver */
     color: #817fff;
-
 }
 section#contato div#redes div#icons a i{
     transition:  all .4s ease-out;
@@ -203,7 +195,6 @@ section#contato div#redes div#icons a i{
 section#contato div#redes div#icons a i:hover{ /*o transforme só funciona dentro do elemento que aparece na tela, por isso colocamos no i e não no a, já que o a é um link*/
     transform: scale(1.5); /*Faz uma trancição em escala do icone importado*/
 }
-
 section#contato div#form{
     display: flex;
     justify-content: center;
@@ -217,9 +208,7 @@ section#contato div#form h3{
 }
 section#contato div#form form{
     width: 50%;
-
 }
-
 section#contato div#form form input, textarea{
     width: 100%;
     padding: .5rem;
@@ -228,12 +217,10 @@ section#contato div#form form input, textarea{
     margin-top: .5rem;/*cria margens na parte superior */
     margin-bottom: 1rem; /*agora na parte inferior*/
     outline: none; /*Retira a borda do input quando clico dentro dele*/
-
 }
 section#contato div#form form label{
     font-size:  1.2rem;
 }
-
 section#contato div#form form button:hover{
     transition:  all .4s ease-out;
 }
@@ -255,6 +242,9 @@ section#contato div#form form button#enviar{
     background-color: #2de6e6;
     color: #fff;
 }
-section#contato div#form form button:hover{
-    transform: scale(1.5);
+section#contato div#form form button#enviar:hover{
+    background-color: blue;  
+}
+section#contato div#form form button#enviar:hover{
+    transform: scale(1.5); 
 }
