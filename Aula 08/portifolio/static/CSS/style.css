@@ -78,7 +78,7 @@ section#projetos{
 section#pojetos div img{
     /* essas duas linha, alinham o elemento(TAG) centralmente */
     display: block; /*Faz o display virar um block*/
-    margin: auto; /* Cria margen iguais dos dois lados deixando o block centralizado. */
+    margin: auto; /*Cria margen iguais dos dois lados deixando o block centralizado. */
 }
 section#projetos div h2{
     text-align: center;
@@ -89,6 +89,9 @@ section#projetos div p{
 }
 section#projetos div{
     padding: 2rem;
+}
+section#projetos div a{
+    text-decoration: none;
 }
 section#projetos div button{
     border: 1px solid #2de6e6;
