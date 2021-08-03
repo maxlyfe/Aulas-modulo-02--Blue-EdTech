@@ -74,7 +74,21 @@ section#projetos{
     justify-content: center; /* Alinha os itens horizaontalmente */
     align-items: center; /* Alinha os itens verticalmente */
     padding: 3rem; /* É um espaçamento interno nos nossos elementos. */
+    position: relative;
+
 }
+section#projetos a#config{
+    padding: 1rem;
+    text-align: end;
+    text-decoration: none;
+    color: #0066ff;
+    font-size: 2rem;
+    transition: all .2s ease-out;
+    position: absolute;
+    top: 0;
+    right: 1rem;  
+}
+
 section#pojetos div img{
     /* essas duas linha, alinham o elemento(TAG) centralmente */
     display: block; /*Faz o display virar um block*/

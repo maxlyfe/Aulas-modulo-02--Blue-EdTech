@@ -6,11 +6,15 @@
    # Ativar o acesso via IMAP: https://mail.google.com/mail/#settings/fwdandpop
 # A verificação de duas etapas deve estar desativada, caso o contrário, você precisará configurar uma senha de app e colocar essa senha aqui.
 
-from flask import Flask,render_template, redirect, request 
+
+from flask import Flask, flash,render_template, redirect, request 
 from flask_mail import Mail, Message #pip install Flask-Mail
+from config import *
+from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
+app.secret_key = 'bluedtech'
 
 mail_settings = {
     "MAIL_SERVER" : 'smtp.gmail.com',
@@ -25,11 +29,53 @@ app.config.update(mail_settings) #Atualiza as configurações do app
 
 mail = Mail(app) 
 
+app.config['SQLALCHEMY_DATABASE_URI'] = url_SQLAlchemy
+db = SQLAlchemy(app)
+
 class Contato:
     def __init__(self, nome, email, mensagem):
         self.nome = nome
         self.email = email
         self.mensagem = mensagem
+
+#----------------------------------------------------------
+class Projeto(db.Model):
+    id = db.Column(db.Integer, primary_key = True, autoincrement = True)
+    nome = db.Column(db.String(150), nullable = False)
+    imagem = db.Column(db.String(500), nullable = False)
+    descricao = db.Column(db.String(500), nullable = False)
+    link = db.Column(db.String(300), nullable=False)
+
+    def __init__(self, nome, imagem, descricao, link):
+        self.nome = nome
+        self.imagem = imagem
+        self.descricao = descricao
+        self.link = link
+#----------------------------------------------------------------
+@app.route('/adm')
+def adm():
+    projetos = Projeto.query.all() # CRUD - READ ALL (LER TODOS)
+    return render_template('adm.html', projetos = projetos)
+
+#CRUD - CREATE
+@app.route('/new', methods=['GET', 'POST'])
+def new():
+    if request.method == 'POST':
+        projeto = Projeto(
+            request.form['nome'],
+            request.form['imagem'],
+            request.form['descricao'],
+            request.form['link']
+        )
+        db.session.add(projeto)
+        db.session.commit()
+        flash('Enviado.')
+        return redirect('/adm')
+
+
+
+
+
 
 @app.route('/')
 def index():
@@ -58,4 +104,5 @@ def send():
     return render_template('send.html', formContato=formContato)
 
 if __name__ == '__main__':
+    db.create_all() # Cria o banco de dados assim que a aplicação é ligada
     app.run(debug=True)
