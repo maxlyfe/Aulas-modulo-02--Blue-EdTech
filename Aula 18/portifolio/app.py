@@ -7,7 +7,7 @@
 # A verificação de duas etapas deve estar desativada, caso o contrário, você precisará configurar uma senha de app e colocar essa senha aqui.
 
 
-from flask import Flask, flash,render_template, redirect, request 
+from flask import Flask, flash,render_template, redirect, request, flash, request
 from flask_mail import Mail, Message #pip install Flask-Mail
 from config import *
 from flask_sqlalchemy import SQLAlchemy
@@ -73,7 +73,34 @@ def new():
         return redirect('/adm')
 
 
+# CRUD - DELETE
+@app.route('/delete/<id>')
+def delete(id):
+    projeto = Projeto.query.get(id)
+    db.session.delete(projeto)
+    db.session.commit()
+    flash('Projeto apagado com sucesso')
+    return redirect('/adm')
 
+
+#CRUD - EDITAR
+
+
+
+# Autenticação e Login
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/auth', methods=['GET', 'POST'])
+def auth():
+    if request.form['senha']== 'admin':
+        session['user_logado'] = 'logado'
+        flash('Login feito com sucesso!')
+        return redirect('/adm')
+    else:
+        flash('Erro no login, tente novamente!')
+        return redirect('/login')
 
 
 

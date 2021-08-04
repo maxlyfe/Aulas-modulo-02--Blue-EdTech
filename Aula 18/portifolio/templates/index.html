@@ -63,10 +63,12 @@
         </section>
         <section id="projetos">
 
-            <a href="/adm" id='config'>
+            <a href="/login" id='config'>
                 <i class="fa fa-cog" aria-hidden="true"></i>
             </a>
 
+
+            
             <div>
                 <img src="./static/img/BlueSoul.jpg" alt="">
                 <h2>Blue Soul</h2>
@@ -74,18 +76,17 @@
                 <p>No qual você é um plebeu que deseja se tornar um grande cavalheiro, sua jornada começa quando se depara frente a morte e as suas decições vão fazer a diferença para conquistar o seu sonho ou continuar com a mesma vida que você leva até hoje.</p>
                 <a href="https://github.com/maxlyfe/BlueSoul" target="_blank"><button>Veja mais</button></a>
             </div>
-            <!-- <div>
-                <img src="./static/img/jokenpoSinais.jpg" alt="">
-                <h2>Jokenpô</h2>
-                <p>Jogo Jokenpô, Desafio modulo 01 Blue EdTech</p>
-                <p>O jogo consiste em escolher uma dentro de tres opções, pedra, papel ou tesoura.</p>
-                <p>Pedra ganha de tesoura.</p>
-                <p>Tesoura ganha de papel.</p>
-                <p>Papel ganha de pedra.</p>
 
-                <a href='https://github.com/maxlyfe/Desafios-Modulo-01---BlueEdTech/blob/main/Desafio%20Jokenp%C3%B4.py' target='_blank'><button>Veja mais</button></a>  
-            </div>
+            
+            {% for p in projetos %}
             <div>
+                <img src="{{p.imagem}}" alt="">
+                <h2>{{p.nome}}}}</h2>
+                <p>{{p.descricao}}</p>
+                <a href='{{p.link}}' target='_blank'><button>Veja mais</button></a>  
+            </div>
+            {% endfor %}
+            <!-- <div>
                 <img src="./static/img/urna.jpg" alt="">
                 <h2>Simulador de Votos</h2>
                 <p>Projeto modulo 01 Blue EdTech</p>
@@ -99,7 +100,7 @@
                 <p>Em este jogo temos um personagem (Riley) com diferentes posibilidades de humor.</p>
                 <p>Você tem 5 opções para escolher e ver como isso afeta a Riley.</p>
                 <a href='https://github.com/maxlyfe/Desafios-Modulo-02--Blue-EdTech/tree/main/Projeto_1-Jogo_Do_Humor/Projeto%20Humor' target="_blank"><button>Veja mais</button></a>
-            </div> -->
+            </div> --> -->
         </section>
         <section id="habilidades">
             <h2>Habilidades Técnicas</h2>
