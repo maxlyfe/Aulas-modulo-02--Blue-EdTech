@@ -1,0 +1,162 @@
+<!DOCTYPE html> <!--Informa a versão do HTML, obrigatorio para iniciar um codigo de website -->
+<html lang="pt-br"> <!--TAG mãe, abre o HTML é decide a linguagem do site-->
+
+    <head> <!--Cabeça, a tag não é mostrado para o usuario.-->
+        <meta charset='UTF-8'> <!--Informa o tipo de teclado que o usuario vai utilizar.-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portifolio Max LyFe</title> <!--Decide qual será o titulo do site.-->
+        <link rel="stylesheet" href='./static/css/style.css'> <!--Chama o style.css para realizar a modificação grafica do codigo.-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head> <!--Fecha a TAG (<head>)-->
+    
+
+    <body> <!--Esta é a TAG que define nosso site, tudo o que estiver dentro dela sera mostrado para o usuario.-->
+        <nav> <!--Abre a TAG 'Menu'-->
+            <ul><!--Abre a TAG 'lista desordenada'-->
+                <!--<li><a href="https://www.google.com.br/" target="_blank"> Google</a></li>  cria uma lista na lista, deixa ele com um link e faz abrir em uma nova aba.-->
+                <!-- <li><a href="https://www.google.com.br/" target="_blank"> Google</a></li> -->
+                <li> <!-- Abre a TAG item-->
+                    <a href="#sobre-mim" target="">
+                        Inicio
+                    </a>
+                </li> <!-- Fecha a TAG item-->
+                <li><!-- Abre a TAG item-->
+                    <a href='#projetos'>
+                    Projetos
+                    </a>
+                </li><!-- Fecha a TAG item-->
+                <li><!-- Abre a TAG item-->
+                    <a href='#habilidades'>
+                    Habilidades
+                    </a>
+                </li><!-- Fecha a TAG item-->
+                <li><!-- Abre a TAG item-->
+                    <a href='#contato'>
+                    Contato
+                    </a>
+                </li><!-- Fecha a TAG item-->
+                
+            </ul><!-- Fecha a TAG 'Lista desordenada'-->
+            
+        </nav> <!-- Fecha a TAG 'Menu'-->
+        <header>
+            <div>
+                <p>
+                    Faça como um programador. Quando tudo está errado e confuso, apague tudo e recomece do zero.
+                </p>
+                <span>Max LyFe</span>
+            </div>
+            <div id="img-dev">
+                <img src="../static/img/Create-bro.svg" width="200" alt="Imagem que representa a contrução de ideias.">
+            </div>
+        </header>
+
+        <section id="sobre-mim">
+            <div>
+                <img src="./static/img/Max_Sem_Fundo.png" width="200" alt="Foto de Max">
+            </div>
+            <div>
+                <p>
+                    Estudante da BlueEdtech
+                </p>
+            </div>
+        </section>
+        <section id="projetos">
+
+            <a href="/adm" id='config'>
+                <i class="fa fa-cog" aria-hidden="true"></i>
+            </a>
+
+            <div>
+                <img src="./static/img/BlueSoul.jpg" alt="">
+                <h2>Blue Soul</h2>
+                <p>BlueSoul é um game de ficção interativa feito para o projeto final do módulo de lógica de programação.</p>
+                <p>No qual você é um plebeu que deseja se tornar um grande cavalheiro, sua jornada começa quando se depara frente a morte e as suas decições vão fazer a diferença para conquistar o seu sonho ou continuar com a mesma vida que você leva até hoje.</p>
+                <a href="https://github.com/maxlyfe/BlueSoul" target="_blank"><button>Veja mais</button></a>
+            </div>
+            <!-- <div>
+                <img src="./static/img/jokenpoSinais.jpg" alt="">
+                <h2>Jokenpô</h2>
+                <p>Jogo Jokenpô, Desafio modulo 01 Blue EdTech</p>
+                <p>O jogo consiste em escolher uma dentro de tres opções, pedra, papel ou tesoura.</p>
+                <p>Pedra ganha de tesoura.</p>
+                <p>Tesoura ganha de papel.</p>
+                <p>Papel ganha de pedra.</p>
+
+                <a href='https://github.com/maxlyfe/Desafios-Modulo-01---BlueEdTech/blob/main/Desafio%20Jokenp%C3%B4.py' target='_blank'><button>Veja mais</button></a>  
+            </div>
+            <div>
+                <img src="./static/img/urna.jpg" alt="">
+                <h2>Simulador de Votos</h2>
+                <p>Projeto modulo 01 Blue EdTech</p>
+                <p>Em este projeto realizamos um programa em Python, onde serão informados X quantidade de candidatos e será efetuado um sistema de votos até ser informado que não tem mais ninguem para votar. Uma vez que finalizar a votação o sistema conta quem teve mais votos, informa o ganhador e informa quantos votos cada candidato obteve.</p>
+                <a href='https://github.com/maxlyfe/Desafios-Modulo-01---BlueEdTech/blob/main/Desafio%20Simulador%20de%20vota%C3%A7%C3%A3o%20-%20Maximiliano%20Gonzalo%20Lopez%20y%20Fernandez.py' target="_blank"><button>Veja mais</button></a>
+            </div>
+            <div>
+                <img src="./static/img/humor.jpg" alt="">
+                <h2>Jogo do Humor</h2>
+                <p>Projeto "Jogo do Humor" modulo 02 Blue EdTech</p>
+                <p>Em este jogo temos um personagem (Riley) com diferentes posibilidades de humor.</p>
+                <p>Você tem 5 opções para escolher e ver como isso afeta a Riley.</p>
+                <a href='https://github.com/maxlyfe/Desafios-Modulo-02--Blue-EdTech/tree/main/Projeto_1-Jogo_Do_Humor/Projeto%20Humor' target="_blank"><button>Veja mais</button></a>
+            </div> -->
+        </section>
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <p>Python</p>
+                <div>
+                    <span id="python">50%</span>
+                </div>
+            <p>HTML 5</p>
+            <div>
+                <span id="html">40%</span>
+            </div>
+            <p>CSS</p>
+            <div>
+                <span id="css">30%</span>
+            </div>
+            <p>JS</p>
+            <div>
+                <span id="js">01%</span>
+            </div>
+
+        </section>
+
+        <section id="contato">
+            <div id="redes">
+                <h3>Se conecte comigo</h3>
+            <div id="icons">    
+                <a href="https://www.linkedin.com/in/maxlyfe/" target="_blank"> <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+
+                <a href="https://github.com/maxlyfe" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+
+                <a href="https://www.instagram.com/max.lyfe/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+
+            </div>
+
+            <div id="form">
+                <h3>Mande uma mensagem</h3>
+                <form action="/send" method="POST">
+                    <label for="nome">Nome</label>
+                    <input id='nome' name='nome' type='text'> <!--Tem diferentes type, numer, data, password, email... entre outros.-->
+
+                    <label for="email">E-mail</label> <!-- cria um bloco para preencher com e-mail-->
+                    <input type='email' id='email' name='email'>
+
+                    <label for='mensagem'>Mensagem</label> <!-- cria uma caixa de mensagem-->
+                    <textarea name='mensagem' cols="30" rows="10"></textarea>
+
+                    <button id='enviar'>Enviar</button> <!-- Cria o botão enviar-->
+                </form>
+            </div>
+
+
+        </section>
+
+        <footer>
+
+        </footer>
+
+        <script src="./static/js/script.js"></script> <!-- Chamamos o Javascript-->
+    </body><!-- Fecha a nossa TAG (<body>).-->
+</html>
