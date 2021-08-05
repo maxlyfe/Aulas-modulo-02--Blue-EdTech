@@ -7,7 +7,7 @@
 # A verificação de duas etapas deve estar desativada, caso o contrário, você precisará configurar uma senha de app e colocar essa senha aqui.
 
 
-from flask import Flask, flash,render_template, redirect, request, flash, request
+from flask import Flask, flash,render_template, redirect, request, flash, session
 from flask_mail import Mail, Message #pip install Flask-Mail
 from config import *
 from flask_sqlalchemy import SQLAlchemy
@@ -52,8 +52,19 @@ class Projeto(db.Model):
         self.descricao = descricao
         self.link = link
 #----------------------------------------------------------------
+@app.route('/')
+def index():
+   session['user_logado'] = None
+   projetos = Projeto.query.all()  # Busca todos os projetos no banco e coloca na veriável projetos, que se transforma em uma lista.
+   return render_template('index.html', projetos=projetos) # Renderiza a página index.html mandando a lista de projetos
+
+
 @app.route('/adm')
 def adm():
+    if 'user_logado' not in session or session['user_logado'] == None:
+        flash('Faça o login antes de ingressar neste site!')
+        return redirect('/login')
+
     projetos = Projeto.query.all() # CRUD - READ ALL (LER TODOS)
     return render_template('adm.html', projetos = projetos)
 
@@ -104,9 +115,6 @@ def auth():
 
 
 
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 @app.route('/send', methods=['GET', 'POST'])
 def send():
